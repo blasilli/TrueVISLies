@@ -1,0 +1,20 @@
+You are given an image that contains one or more visualizations and an accompanying caption.
+
+The caption is: "<<CAPTION>>".
+
+Your task is to:
+	1.	Analyze the content of the image and the caption.
+	2.	Describe in detail what the visualizations represent. Identify axes, trends, patterns, categories, or notable data points.
+	3.	Interpret the visualizations: What insights can be drawn? What is the likely message or conclusion the visualizations are communicating?
+	4.	Provide your own conclusion based on your analysis.
+	5.	Rate your confidence in your interpretation on a scale from 0 to 100, where 0 means “not confident at all” and 100 means “completely confident.” Justify your confidence score (e.g., image clarity, ambiguity in data, alignment with caption, etc.).
+
+Be thorough, clear, and precise in your explanation. Avoid vague statements.
+
+Answer in JSON format, like this:
+{
+  "confidence": "numerical score from task point 5 goes here",
+  "analysis": "your detailed analysis response (task points 1–5) goes here"
+}
+
+Do not include anything else other than the json object. Do not say '''json at the beginning.

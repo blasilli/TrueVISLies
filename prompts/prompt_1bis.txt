@@ -1,0 +1,88 @@
+You are given the analysis of an image containing one or more data visualizations and an accompanying caption. This analysis has been written by another language model.
+You do NOT have access to the original image or caption, you have only access to the textual analysis. Your task is to evaluate that analysis to assess the visualizations it describes.
+
+Be aware: The visualizations described may be misleading, either intentionally or unintentionally. They might include distortions, manipulations, or design choices that misrepresent the underlying data.
+
+
+The textual analysis is: 
+
+---
+<<ANALYSIS>>
+---
+
+Your task is to:
+
+1. Understand the analysis provided by the LLM.
+2. Evaluate whether the visualization(s) described in the analysis are misleading. Use the list of error types provided at the end of this prompt to guide your judgment. Rate your confidence in this judgment on a scale from 0 to 100, where: 0 = not confident at all  and 100 = completely confident. If misleading elements are present, set `is_misleading` to `true` and list the corresponding error types under `misleading_aspects`. Otherwise, set `is_misleading` to `false` and leave the list empty.
+3. Determine whether the misleading aspects are likely intentional or unintentional. Rate your confidence in this assessment from 0 to 100.
+4. Identify the types of visualization rhetoric present, using the five core types provided below. For each type you identify, rate your confidence (0–100). For each type, indicate whether it supports the misleading aspects (if any).
+
+
+
+You must respond using the following JSON structure:
+{
+  "is_misleading": "a boolean indicating whether you think the visualizations are misleading",
+  "confidence_on_misleading": "numerical score from task point 2 goes here, expressing your confidence in whether the visualizations are misleading or not",
+  "is_intentional": "a boolean indicating whether you think the misleading aspects are intentional",
+  "confidence_on_intentional": "numerical score from task point 3 goes here, expressing your confidence in whether the misleading aspects are intentional or unintentional",
+  "misleading_aspects": [
+	"a list of strings, each string is one of the error types listed at the end of this prompt that you identified in the visualizations"
+  ],
+  "rhetoric_types": {
+  	"Information_Access_Rhetoric": {
+  	  "exists": "boolean indicating whether this type applies to the visualizations",
+  	  "confidence": "numerical score from task point 4 goes here",
+  	  "supports_misleading": "boolean indicating whether this type supports the misleading aspects identified in point 2"
+  	},
+  	"Provenance_Rhetorics": {
+  	  "exists": "boolean indicating whether this type applies to the visualizations",
+  	  "confidence": "numerical score from task point 4 goes here",
+  	  "supports_misleading": "boolean indicating whether this type supports the misleading aspects identified in point 2"
+  	},
+      "Mapping_Rhetoric": {
+  	  "exists": "boolean indicating whether this type applies to the visualizations",
+  	  "confidence": "numerical score from task point 4 goes here",
+  	  "supports_misleading": "boolean indicating whether this type supports the misleading aspects identified in point 2"
+  	},
+      "Linguistic_Based_Rhetoric": {
+  	  "exists": "boolean indicating whether this type applies to the visualizations",
+  	  "confidence": "numerical score from task point 4 goes here",
+  	  "supports_misleading": "boolean indicating whether this type supports the misleading aspects identified in point 2"
+  	},
+    "Procedural_Rhetoric": {
+  	  "exists": "boolean indicating whether this type applies to the visualizations",
+  	  "confidence": "numerical score from task point 4 goes here",
+  	  "supports_misleading": "boolean indicating whether this type supports the misleading aspects identified in point 2"
+  	}
+  }
+}
+
+
+
+Do not include anything else other than the JSON object. Do not say '''json at the beginning, or ''' at the end.
+
+
+
+Here is a list of error that can be present in visualizations and make the visualizations misleading:
+- Truncated axis: A truncated axis does not start at zero. This can occur in both horizontal and vertical axes.
+- Dual axis: A dual axis is when there is more than 1 (vertical, typically) axis on the same chart (does not include 2 charts side-by-side).
+- Value as area/volume: Value as area/volume is when a numeric value is encoded as area (e.g., circles) or volume (e.g., cubes).
+- Inverted axis: Inverted axis is when the axis directions are opposite to what one would expect (e.g., cases increasing = down). This can occur in both horizontal and vertical axes.
+- Uneven binning: Uneven binning is when a chart’s bins are arbitrarily defined or have uneven bin sizes.
+- Unclear encoding: Unclear encoding is when it is not possible to completely understand what is shown in a given chart due to issues such as poor image quality, overcomplicated representation, or simply not enough information to understand the chart because of issues such as the legend is cut-off.
+- Inappropriate encoding: Inappropriate encoding is when the chart’s type (line chart, pie chart, etc.) is clearly not appropriate given the underlying data. For instance, showing a value change year-to-year with a stacked bar chart, as opposed to a simple or clustered one. Or a change in a value is plotted in a case where you would expect the absolute value instead.
+- Cherry-picking: Cherry-picking is when the main conclusion of a chart and its accompanying text (title, annotation, caption) is consistent with the incomplete evidence presented but likely would not be generalizable with more representative evidence.
+- Setting an arbitrary threshold: Setting an arbitrary threshold is when a chart’s accompanying text (title, annotation, caption) uses an arbitrary (i.e., not present in visualized data, not known, not justified) threshold to make judgments, inferences and derive insights from the visualization. The threshold can be stated explicitly as a number, or be added as an annotation in a chart.
+- Causal inference Causal inference is when a chart’s accompanying text (title, annotation, caption) suggests a cause-and-effect relationship in an attempt to explain certain salient features of the chart and evaluate them. Causal relationships are typically evaluated either by themselves against an arbitrary (e.g. message author defined) satisfactory threshold or against another inferred causal relationship. Causality inferred from a visualization can be especially misleading in cases when the data are cherry-picked.
+- Issues with data validity: A message has issues with data validity when the message’s chart doesn’t include explicit information about caveats related to data accuracy and data interpretation or the message’s text doesn’t reflect on existing caveats in their interpretation of the visualization.
+- Failure to account for statistical nuance: Failure to account for statistical nuance is when a message’s chart or text makes a conclusion using inferences drawn without considering statistical nuances such as base rate fallacy.
+- Misrepresentation of scientific studies: Misrepresentation of scientific studies is when a chart’s accompanying text (title, annotation, caption) relies upon pseudo-science to come to a conclusion.
+Incorrect reading of chart: Incorrect reading of a chart is when a message’s author cites a chart as evidence to a conclusion, but the author fails to correctly read the data presented by said chart.
+
+
+Here is an overview of the five core types of visualization rhetoric: Information Access Rhetoric, Provenance Rhetoric, Mapping Rhetoric, Linguistic-Based Rhetoric, and Procedural Rhetoric.
+	- Information Access Rhetoric: Refers to choices about what data to include, omit, filter, or aggregate. These choices shape what the viewer sees and which patterns or narratives are emphasized.
+	- Provenance Rhetoric: Relates to how a visualization communicates trustworthiness, such as by citing sources, explaining methods, noting uncertainty, or including methodology or assumptions.
+	- Mapping Rhetoric: Involves how data values are translated into visual features such as position, size, scale, metaphor, or color. This can create emphasis or shape perception beyond what the raw data conveys.
+	- Linguistic-Based Rhetoric: Uses language elements like titles, labels, annotations, or captions to guide interpretation. Often includes metaphor, irony, rhetorical questions, or other narrative framing.
+	- Procedural Rhetoric: Relates to interaction and navigation design, such as default views, filters, or animations. These features guide how users explore the data and can influence which conclusions they reach.
