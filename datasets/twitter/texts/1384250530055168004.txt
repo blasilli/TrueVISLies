@@ -1,0 +1,8 @@
+Vaccine update from 
+@CDCgov
+:
+
+- 2.2M new doses
+- Avg at 3.13M per day
+
+See more at: https://ckelly17.github.io/vaccine_dashboard.html…

@@ -1,0 +1,1 @@
+#covid19 in 20 countries. Data from Johns Hopkins. No model is perfect, be careful with numbers.

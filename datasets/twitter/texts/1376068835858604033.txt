@@ -1,0 +1,3 @@
+ADR (adverse drug reaction) Reports in EU
+Source: 
+@EMA_News

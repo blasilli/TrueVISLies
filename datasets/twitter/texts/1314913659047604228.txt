@@ -1,0 +1,1 @@
+This chart tracks the progression from infection to death.

@@ -1,0 +1,4 @@
+San Diego County Covid-19 hospitalizations.
+
+Find a vaccination site:
+http://coronavirus-sd.com/vaccine

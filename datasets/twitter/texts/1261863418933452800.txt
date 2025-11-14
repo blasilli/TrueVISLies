@@ -1,0 +1,3 @@
+7Day  Moving Averages:
+1) Daily confirmed cases
+2)Daily COVID deaths

@@ -1,0 +1,2 @@
+COVID death rate per million, across states of India.
+All-India = 30.37

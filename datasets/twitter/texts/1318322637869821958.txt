@@ -1,0 +1,5 @@
+Here are the states with fewer Covid-19 hospitalizations than El Paso County. 
+
+Data from 
+@COVID19Tracking
+.

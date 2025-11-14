@@ -1,0 +1,4 @@
+World map showing the number of Covid-19 deaths by country
+
+
+@AFPgraphics

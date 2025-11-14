@@ -1,0 +1,4 @@
+Covid-19 incidence, confirmed cases, population adjusted.
+-Italy (black)
+-Spain (red)
+-USA (blue)

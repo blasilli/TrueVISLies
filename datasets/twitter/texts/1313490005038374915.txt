@@ -1,0 +1,3 @@
+Covid deaths, UK and Sweden.  This could get very awkward.
+
+https://ourworldindata.org/coronavirus-data-explorer?zoomToSelection=true&time=2020-01-12..latest&country=GBR~SWE&region=World&deathsMetric=true&interval=smoothed&perCapita=true&smoothing=7&pickerMetric=location&pickerSort=asc…

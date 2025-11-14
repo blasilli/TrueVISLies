@@ -1,0 +1,3 @@
+First reduction in 7-day average of cases (by specimen date) in UK's "2nd wave"
+
+https://coronavirus.data.gov.uk/cases

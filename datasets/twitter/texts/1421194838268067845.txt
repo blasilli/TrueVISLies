@@ -1,0 +1,2 @@
+And here is an up to date data from Israel.
+New severe cases normalized to 1M, by age.

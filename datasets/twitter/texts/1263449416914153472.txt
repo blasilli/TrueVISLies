@@ -1,0 +1,1 @@
+This is a cut of the national covid hospitalization data for states outside the New York tristate region.

@@ -1,0 +1,1 @@
+Banging out the Gompertz model for NSW covid and it's doing a pretty solid job (results are not good)

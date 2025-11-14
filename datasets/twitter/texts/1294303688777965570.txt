@@ -1,0 +1,3 @@
+1,441 cases now.
+
+And it looks to be a non-linear upward trend.

@@ -1,0 +1,4 @@
+Confirmed Cases (Blue)
+Total hospitalizations (Green)
+Intensive Care (Yellow)
+Deaths (Red)

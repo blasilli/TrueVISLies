@@ -1,0 +1,2 @@
+Victoria COVID-19 11/08/2020
+95% confidence intervals on a 3rd order polynomial fit of the latest case data.

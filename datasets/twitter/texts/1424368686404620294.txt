@@ -1,0 +1,3 @@
+National ICU bed capacity and the portion occupied by COVID patients.
+
+https://coronavirus.jhu.edu/data/hospitalization-7-day-trend…

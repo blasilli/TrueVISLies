@@ -1,0 +1,1 @@
+Percentage of each age group with at least one #vaccine completed.

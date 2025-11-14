@@ -1,0 +1,3 @@
+US COVID Deaths
+Fully vaccinated (left)
+Not fully vaccinated (right)

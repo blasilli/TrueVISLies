@@ -1,0 +1,3 @@
+ Vaccinations work. AstraZenca works. 
+
+ Number of coronavirus patients in hospital:

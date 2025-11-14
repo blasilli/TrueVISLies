@@ -1,0 +1,4 @@
+I updated (April 16, 2021) the VAERS reported vaccine deaths graph.
+
+https://vaers.hhs.gov
+https://openvaers.com/covid-data

@@ -1,0 +1,5 @@
+England COVID-19 Healthcare.
+
+ Patients admitted
+ Patients in hospital
+ Patients in ventilation beds

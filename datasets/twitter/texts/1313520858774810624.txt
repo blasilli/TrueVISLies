@@ -1,0 +1,3 @@
+We've added a CSV data download to the 
+@commonslibrary
+ coronavirus restrictions map. https://visual.parliament.uk/research/visualisations/coronavirus-restrictions-map…

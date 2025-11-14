@@ -1,0 +1,3 @@
+Falling case fatality rate:
+Global = 2.93%
+India = 1.54%

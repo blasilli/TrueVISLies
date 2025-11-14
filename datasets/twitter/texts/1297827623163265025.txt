@@ -1,0 +1,2 @@
+Germany: 
+tests vs. asymptomatic vs. symptomatic

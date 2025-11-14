@@ -1,0 +1,3 @@
+Monthly COVID-19 cases and death cases 
+For more details visit : https://covidradar24.org
+#COVID19 #rstats #Python
