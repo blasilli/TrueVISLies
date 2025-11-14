@@ -48,6 +48,7 @@ The dataset folder contains the following structure:
 
 - `index.csv`: A CSV file with metadata and error classifications for each tweet.
 - `data/`: A folder containing one JSON file per tweet, with detailed information.
+- `texts/`: A folder containing one plain text file per tweet, with the tweet content.
 - `images/`: A folder containing one PNG image per tweet, corresponding to the tweet content.
 
 ## Fields in the JSON Files
